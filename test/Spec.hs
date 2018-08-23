@@ -1,2 +1,8 @@
+
+import Test.Tasty
+import qualified ParserSpec as PSpec
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = defaultMain tests
+
+tests = testGroup "Tests" [PSpec.unitTests]

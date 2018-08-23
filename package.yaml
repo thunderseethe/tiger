@@ -1,10 +1,10 @@
 name:                tiger
 version:             0.1.0.0
-github:              "githubuser/tiger"
+github:              "thunderseethe/tiger"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2018 Author name here"
+author:              "thunderseethe"
+maintainer:          "thunderseethe.dev@gmail.com"
+copyright:           "2018 thunderseethe"
 
 extra-source-files:
 - README.md
@@ -21,9 +21,21 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- megaparsec >= 6.5 && < 7
+- text >= 1.2 && < 2
+- mtl >= 2.2 && < 3
+- recursion-schemes >= 5.0 && < 6
+- transformers-compat >= 0.6.2 && < 1
+- unordered-containers >= 0.2.9 && < 1
+- prettyprinter >= 1.2.1 && < 2
 
 library:
   source-dirs: src
+
+default-extensions:
+- OverloadedStrings
+- DuplicateRecordFields
+- NamedFieldPuns
 
 executables:
   tiger-exe:
@@ -46,3 +58,6 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - tiger
+    - tasty
+    - tasty-hunit
+    - tasty-quickcheck
